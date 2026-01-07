@@ -400,7 +400,7 @@ void drawing_render(Layer *layer, GContext *ctx) {
   // draw header and footer text
   graphics_context_set_text_color(ctx, drawing_data.fore_color);
   prv_render_header_text(ctx, bounds);
-  prv_render_footer_text(ctx, bounds);
+  // prv_render_footer_text(ctx, bounds); // Removed: current time display
 }
 
 // Update the drawing states and recalculate everythings positions
