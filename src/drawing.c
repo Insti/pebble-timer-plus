@@ -253,8 +253,8 @@ static void prv_render_progress_ring(GContext *ctx, GRect bounds) {
   bounds.origin.y += bounds.size.h / 2 - radius;
   bounds.size.w = bounds.size.h = radius * 2;
   // draw ring on context
-  int32_t angle_1 = drawing_data.progress_angle;
-  int32_t angle_2 = TRIG_MAX_ANGLE;
+  int32_t angle_1 = 0;
+  int32_t angle_2 = drawing_data.progress_angle;
   graphics_context_set_fill_color(ctx, drawing_data.back_color);
   graphics_fill_radial(ctx, bounds, GOvalScaleModeFillCircle, radius, angle_1, angle_2);
 }
